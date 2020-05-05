@@ -74,17 +74,17 @@ func (self *CircleLink) Reverse() {
 
 //插入法实现逆序
 
-func (this *CircleLink) InsertReverse() {
-	if this.head.Next == nil || this.head == nil {
+func (self *CircleLink) InsertReverse() {
+	if self.head.Next == nil || self.head == nil {
 		return
 	}
 	var cur *Node
 	var next *Node
-	cur = this.head.Next
+	cur = self.head.Next
 	for cur != nil {
 		next = cur.Next
-		cur.Next = this.head.Next
-		this.head.Next = cur
+		cur.Next = self.head.Next
+		self.head.Next = cur
 		cur = next
 	}
 }
