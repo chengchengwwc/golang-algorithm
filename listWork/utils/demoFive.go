@@ -31,3 +31,34 @@ func FindLastK(head *Node, kValue int) *Node {
 	return slow
 
 }
+
+
+// 如何将单链表向右旋转k个位置
+
+func RotateK(head *Node,k int){
+	if head == nil || head.Next == nil{
+		return 
+	}
+	slow := head.Next
+	fast := head.Next
+
+	i := 0
+	for i:=0;i<k&&fast != nil;i++{
+		fast = fast.Next
+	}
+	if(i <k){
+		return
+	}
+
+	for fast.Next != nil{
+		slow = slow.Next
+		fast = fast.Next
+	}
+	tmp := slow 
+	slow = slow.Next
+	tmp.Next = nil
+	fast.Next = head.Next
+	head.Next = slow
+
+
+}
