@@ -7,5 +7,5 @@ trapping-rain-water
 */
 
 func maxSlidingWindow(nums []int, k int) []int {
-
+   return nil
 }
