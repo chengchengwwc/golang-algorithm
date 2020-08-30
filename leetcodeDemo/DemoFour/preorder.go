@@ -1,8 +1,6 @@
 package DemoFour
 
 
-
-
 /*
 N叉树前序遍历
 题目：589
